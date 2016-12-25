@@ -9,6 +9,7 @@ declare -A outputLang
 
 defaultFromLang="en"
 defaultToLang="it"
+defaultIntfLang="en" # Default language for interface
 
 # Location of the scripts
 LOCATION="${HOME}/.config/scripts/wordreference/"
@@ -44,10 +45,9 @@ translationsFound["it"]="Traduzioni: "
 translationsFound["fr"]="Traductions: "
 translationsFound["es"]="Traducciones: "
 
-intfLang="en" # Default language for interface
 for i in "${!translateFrom[@]}"; do
     if [[ $i == $1 ]]; then
-        intfLang=$i
+        defaultIntfLang=$i
     fi
 done
 
@@ -60,12 +60,12 @@ fi
 
 # If no destination language is selected, use the default one
 if [[ $3 == "" ]]; then
-    tolang=$defaultToLang
+    tolang=$defaultToLangP
 else
     tolang=$3
 fi
 
 #Menu language selection to/from - still to code
-#lang=$(echo -e "English|Italian" | rofi -fuzzy -i -markup-rows -sep '|' -dmenu -p "${translateFrom[$intfLang]}")
-toTranslate=$(echo -e " " | rofi -dmenu -p "${wordToTranslate[$intfLang]}")
-"$LOCATION/./wordreference.py" "$fromLang$tolang" "$toTranslate" | rofi -markup-rows -i -dmenu -p "${translationsFound[$intfLang]}"
+#lang=$(echo -e "English|Italian" | rofi -fuzzy -i -markup-rows -sep '|' -dmenu -p "${translateFrom[$defaultIntfLang]}")
+toTranslate=$(echo -e " " | rofi -dmenu -p "${wordToTranslate[$defaultIntfLang]}")
+"$LOCATION/./wordreference.py" "$fromLang$tolang" "$toTranslate" | rofi -markup-rows -i -dmenu -p "${translationsFound[$defaultIntfLang]}"
