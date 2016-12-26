@@ -6,7 +6,9 @@ I am by no means a Bash or Python scripting guru. The code can be improved for s
 
 This is a home-made project I did to have quick access to translations from english to italian (my own language), and was further extended to support the main other languages available on Wordreference.
 
-Feel free to fork, modify and suggests improvements but **no guarantees on keeping this project up to date are given** as this is done during my free time.
+Feel free to fork, modify and suggest improvements.
+
+**No guarantees on keeping this project up to date are given** as this is done during my free time.
 
 # Requirements
 
