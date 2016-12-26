@@ -71,5 +71,8 @@ for res in soup.select(selector):
     for inner in res.select("td.ToWrd"):
         cleanTo(inner)
 
-for frm, to in zip(fromWrd, toWrd):
-    print(frm, to, sep=": ")
+if len(fromWrd) == 0 or len(toWrd) == 0 :
+    print("<b>NO TRANSLATIONS FOUND</b>")
+else :
+    for frm, to in zip(fromWrd, toWrd):
+        print(frm, to, sep=": ")
