@@ -21,7 +21,7 @@ The script takes as input 3 parameters:
 
   + *Language Interface*: it, en, fr, es
   + *Source Language*: it, en, fr, es
-  + *Target Language:* en (if **it**/fr/es is chosen) or it/fr/es (if en is chosen) 
+  + *Target Language:* en (if it/fr/es is chosen) or it/fr/es (if en is chosen) 
 
 You can translate quickly, using **Rofi**, any word in the given language to the other target language.
 
