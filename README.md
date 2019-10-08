@@ -19,9 +19,9 @@ Feel free to fork, modify and suggest improvements.
 # Usage
 The script takes as input 3 parameters:
 
-  + *Language Interface*: it, en, fr, es
-  + *Source Language*: it, en, fr, es
-  + *Target Language:* en (if it/fr/es is chosen) or it/fr/es (if en is chosen) 
+  + *Language Interface*: it, en, fr, es, de
+  + *Source Language*: it, en, fr, es, de
+  + *Target Language:* en (if it/fr/es/de is chosen) or it/fr/es/de (if en is chosen)
 
 You can translate quickly, using **Rofi**, any word in the given language to the other target language.
 
@@ -42,16 +42,16 @@ And after you press Return:
 
 This prints the help message because *non-english to non-english* language translation is not supported:
 
-    usage: wordreference.py [-h] {en,it,es,fr} {en,it,es,fr} {en,it,es,fr}
+    usage: wordreference.py [-h] {en,it,es,fr,de} {en,it,es,fr,de} {en,it,es,fr,de}
 
     This is used to get a quick translation from italian, french or spanish to
     english OR viceversa. NOTE: translation from non-english to non-english or
     from same-language to same-language is forbidden
 
     positional arguments:
-      {en,it,es,fr}  Interface language
-      {en,it,es,fr}  Source translation language
-      {en,it,es,fr}  Target translation language
+      {en,it,es,fr,de}  Interface language
+      {en,it,es,fr,de}  Source translation language
+      {en,it,es,fr,de}  Target translation language
 
     optional arguments:
       -h, --help     show this help message and exit

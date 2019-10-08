@@ -51,10 +51,10 @@ def cleanTo(element):
         toWrd.append(word)
 
 
-languages = ["en", "it", "es", "fr"]
-forbidden = ["it", "es", "fr"]
+languages = ["en", "it", "es", "fr", "de"]
+forbidden = ["it", "es", "fr", "de"]
 
-prog_description = "This is used to get a quick translation from italian, french or spanish to english OR viceversa. NOTE: translation from non-english to non-english or from same-language to same-language is forbidden"
+prog_description = "This is used to get a quick translation from italian, french, spanish or german to english OR viceversa. NOTE: translation from non-english to non-english or from same-language to same-language is forbidden"
 
 parser = argparse.ArgumentParser(description=prog_description)
 
@@ -76,11 +76,13 @@ wordToTranslate["en"] = "Word to translate: "
 wordToTranslate["it"] = "Parola da tradurre: "
 wordToTranslate["fr"] = "Mot à traduire: "
 wordToTranslate["es"] = "Palabra para traducir: "
+wordToTranslate["de"] = "Zu übersetzendes Wort: "
 
 translationsFound["en"] = "Translations: "
 translationsFound["it"] = "Traduzioni: "
 translationsFound["fr"] = "Traductions: "
 translationsFound["es"] = "Traducciones: "
+translationsFound["de"] = "Übersetzungen: "
 
 word_to_translate_cmd = "echo ' ' | rofi -dmenu -p '{}'".format(wordToTranslate[args.interface_language])
 # Run the command then remove the ending newline, and decode the bytestring as a normal utf-8 string
